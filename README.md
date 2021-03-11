@@ -6,7 +6,7 @@ Install using devtools:
 
 # Overview
 
-The function ```dhsc::colours()``` will return a named list of the approved
+The function ```dhsc_colours()``` will return a named list of the approved
 colours. Each individual colour can also be called by it's helper function.
 For example: ```dhsc_dark_blue()```.
 
