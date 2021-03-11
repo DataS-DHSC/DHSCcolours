@@ -19,7 +19,7 @@ library(DHSCcolours)
 
 ggplot(iris, aes(x=Species,y=Sepal.Length, colour=Species, fill=Species))+
   geom_boxplot()+
-  DHSCcolours::scale_colour_dhsc_d(aesthetics = c("fill","colour"))
+  scale_colour_dhsc_d(aesthetics = c("fill","colour")) # from DHSCcolours package
 ```
 
 
