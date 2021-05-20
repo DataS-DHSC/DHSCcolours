@@ -252,39 +252,72 @@ scale_fill_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
   )
 }
 
-#' @title scale_colour_dhsc
+#' @title scale_colour_dhsc_c
 #' Use a continuous colour scale from DHSC green to purple.
 #'
 #' @export
 #'
-scale_colour_dhsc<-function(){
+scale_colour_dhsc_c<-function(){
   ggplot2::scale_colour_gradient(low=dhsc_primary(),high=dhsc_purple())
 }
 
-#' @title scale_colour_dhsc_red_green
+#' @title scale_fill_dhsc_c
+#' Use a continuous colour scale from DHSC green to purple.
+#'
+#' @export
+#'
+scale_fill_dhsc_c<-function(){
+  ggplot2::scale_fill_gradient(low=dhsc_primary(),high=dhsc_purple())
+}
+
+#' @title scale_colour_dhsc_red_green_c
 #' @description Use a continuous colour scale from DHSC green to red.
 #' @export
 #'
-scale_colour_dhsc_red_green<-function(){
+scale_colour_dhsc_red_green_c<-function(){
   ggplot2::scale_colour_gradient(low=dhsc_primary(),high=dhsc_red())
 }
+
+
+#' @title scale_fill_dhsc_red_green_c
+#' @description Use a continuous fill scale from DHSC green to red.
+#' @export
+#'
+scale_fill_dhsc_red_green_c<-function(){
+  ggplot2::scale_fill_gradient(low=dhsc_primary(),high=dhsc_red())
+}
+
 
 #' @title scale_colour_dhsc_blue_green
 #' @description Use a continuous colour scale from DHSC blue to green.
 #' @export
 #'
-scale_colour_dhsc_blue_green<-function(){
+scale_colour_dhsc_blue_green_c<-function(){
   ggplot2::scale_colour_gradient(low = dhsc_dark_blue(),high=dhsc_primary())
+}
+
+#' @title scale_fill_dhsc_blue_green
+#' @description Use a continuous fill scale from DHSC blue to green.
+#' @export
+#'
+scale_fill_dhsc_blue_green_c<-function(){
+  ggplot2::scale_fill_gradient(low = dhsc_dark_blue(),high=dhsc_primary())
 }
 
 #' @title scale_colour_dhsc_blue_yellow
 #' @description Use a continuous colour scale from DHSC blue to yellow
 #' @export
 #'
-scale_colour_dhsc_blue_yellow<-function(){
+scale_colour_dhsc_blue_yellow_c<-function(){
   ggplot2::scale_colour_gradient(low = dhsc_dark_blue(),high=dhsc_yellow())
 }
 
-
+#' @title scale_fill_dhsc_blue_yellow
+#' @description Use a continuous fill scale from DHSC blue to yellow
+#' @export
+#'
+scale_fill_dhsc_blue_yellow_c<-function(){
+  ggplot2::scale_fill_gradient(low = dhsc_dark_blue(),high=dhsc_yellow())
+}
 
 
