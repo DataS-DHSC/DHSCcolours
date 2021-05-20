@@ -93,20 +93,32 @@ dhsc_purple<-function(){"#512698"}
 #'
 #' @examples dhsc_colours()
 dhsc_colours<-function(){
-  list(dhsc_primary="#00ad93",
-       dhsc_dark_blue="#0063be",
-       dhsc_black="#101820",
+  list(
+    dhsc_primary ="#00ad93",
+    dhsc_light_blue ="#34b6e4",
+    dhsc_dark_blue ="#0063be",
+    dhsc_light_green ="#2eb135",
+    dhsc_dark_green ="#006652",
+    dhsc_yellow ="#ecac00",
+    dhsc_orange ="#e57200",
+    dhsc_burgendy ="#8b2346",
+    dhsc_red ="#cc092f",
+    dhsc_pink ="#cd66cc",
+    dhsc_purple ="#512698"
+  )}
+
+
+#' @title dhsc_bw
+#' @description A named list of all the "official" DHSC black, white and grey.
+#' @return A named list
+#' @export
+#'
+#' @examples dhsc_colours()
+
+dhsc_bw<-function(){
+list(dhsc_black="#101820",
        dhsc_grey="#616265",
-       dhsc_red="#cc092f",
-       dhsc_orange="#e57200",
-       dhsc_yellow="#ecac00",
-       dhsc_burgendy="#8b2346",
-       dhsc_light_blue="#34b6e4",
-       dhsc_light_green="#2eb135",
-       dhsc_dark_green="#006652",
-       dhsc_pink="#cd66cc",
-       dhsc_white="#ffffff",
-       dhsc_purple="#512698"
+       dhsc_white="#ffffff"
        )}
 
 
