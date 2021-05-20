@@ -14,12 +14,54 @@ There are also some colour scales which you can ```+``` on to a ggplot object
 to recolour it with DHSC colours e.g.:
 
 ```
-library(ggplot2)
-library(DHSCcolours)
+#Barplot with 3 bars with a discrete X axis filled with DHSC colours
+sim_series(3)%>%
+  ggplot(aes(x=X, y=Z, fill=X))+
+  geom_col()+
+  DHSCcolours::scale_fill_dhsc_d()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_d")
 
-ggplot(iris, aes(x=Species,y=Sepal.Length, colour=Species, fill=Species))+
-  geom_boxplot()+
-  scale_colour_dhsc_d(aesthetics = c("fill","colour")) # from DHSCcolours package
+#Barplot with 25 bars with a discrete X axis filled with DHSC colours
+sim_series(25)%>%
+  ggplot(aes(x=X, y=Z, fill=X))+
+  geom_col()+
+  DHSCcolours::scale_fill_dhsc_d()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_d")
+  
+#Barplot with 25 bars with a continuous X axis with DHSC primary green - purple fill
+sim_series(25)%>%
+  ggplot(aes(x=Y, y=Z, fill=Z))+
+  geom_col()+
+  scale_fill_dhsc_c()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_c")
+
+#Barplot with 25 bars with a continuous X axis with red green fill
+sim_series(25)%>%
+  ggplot(aes(x=Y, y=Z, fill=Z))+
+  geom_col()+
+  scale_fill_dhsc_red_green_c()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_red_green_c")
+
+#Barplot with 25 bars with a continuous X axis with blue green fill
+sim_series(25)%>%
+  ggplot(aes(x=Y, y=Z, fill=Z))+
+  geom_col()+
+  scale_fill_dhsc_blue_green_c() +
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_blue_green_c")
+
+#Barplot with 25 bars with a continuous X axis with blue yellow fill
+sim_series(25)%>%
+  ggplot(aes(x=Y, y=Z, fill=Z))+
+  geom_col()+
+  scale_fill_dhsc_blue_yellow_c() +
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_blue_yellow_c")
+
 ```
 
 
