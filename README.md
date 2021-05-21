@@ -13,6 +13,10 @@ For example: ```dhsc_dark_blue()```.
 There are also some colour scales which you can ```+``` on to a ggplot object 
 to recolour it with DHSC colours e.g.:
 
+Furthermore, installing this package will install the template for a DHSC
+branded powerpoint in rmarkdown. Accessed from within rstudio via:
+*File > New File > R Markdown > From Template > DHSC Powerpoint*
+
 ```
 #Barplot with 3 bars with a discrete X axis filled with DHSC colours
 sim_series(3)%>%
