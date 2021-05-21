@@ -1,0 +1,4 @@
+name: DHSC Powerpoint
+description: >
+   An rmarkdown template for DHSC branded powerpoint presentations.
+create_dir: FALSE

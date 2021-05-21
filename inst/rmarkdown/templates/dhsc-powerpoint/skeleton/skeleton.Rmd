@@ -1,0 +1,99 @@
+---
+title: DHSC powerpoint
+subtitle: This is a placeholder subtitle
+output: 
+  powerpoint_presentation:
+    reference_doc: DHSC_template.pptx
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require("pacman")) install.packages("pacman,knitr")
+pacman::p_load(knitr,DHSCcolours,dplyr,ggplot2)
+  
+```
+
+## Side by Side slide
+
+:::::::::::::: {.columns}
+::: {.column}
+* This is the text on the left side of the slide.
+* There is a table on the right, with some of the data in mtcars.
+:::
+::: {.column}
+```{r cars2, echo=FALSE}
+kable(head(cars))
+```
+:::
+::::::::::::::
+::: notes
+- This is a test speaker note
+- *and inline formatting*
+:::
+  
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars,echo=TRUE, eval=FALSE}
+library(dplyr)
+head(iris)
+print(iris)
+```
+
+## Full slide table
+
+```{r cars3,echo=FALSE}
+kable(head(iris))
+```
+
+
+## Slide with a plot on it
+
+
+
+```{r pressure, echo=FALSE}
+#Barplot with 3 bars with a discrete X axis filled with DHSC colours
+sim_series(3)%>%
+  ggplot(aes(x=X, y=Z, fill=X))+
+  geom_col()+
+  DHSCcolours::scale_fill_dhsc_d()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_d")
+```
+
+
+
+
+## Test slide with code, text and plot
+
+:::::::::::::: {.columns}
+::: {.column}
+- You can also embed code chunks.
+- The chunk below codes a barplot using the DHSC theme and colour palette. 
+```{r pressure3, eval=FALSE,echo=TRUE}
+  ggplot(data = sim_series(25), aes(x=X, y=Z, fill=X))+
+  geom_col()+
+  scale_fill_dhsc_d()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_d")
+```
+- Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot on the right where the plot is displayed.
+:::
+::: {.column}
+```{r pressure2, echo=FALSE}
+#Barplot with 25 bars with a discrete X axis filled with DHSC colours
+sim_series(25)%>%
+  ggplot(aes(x=X, y=Z, fill=X))+
+  geom_col()+
+  DHSCcolours::scale_fill_dhsc_d()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_d")
+```
+:::
+::::::::::::::

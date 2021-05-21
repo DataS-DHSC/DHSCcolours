@@ -16,5 +16,7 @@ Imports:
     grDevices,
     ggplot2,
     dplyr
-
-
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr

@@ -229,6 +229,7 @@ scale_colour_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
 #'  name(s) of the aesthetic(s) that this scale works with. This can be useful,
 #'  for example, to apply colour settings to the colour and fill aesthetics at
 #'  the same time, via [aesthetics = c("colour", "fill")].
+#' @export
 #'
 scale_fill_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
                                 direction = 1, aesthetics = "fill") {

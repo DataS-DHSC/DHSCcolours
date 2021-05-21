@@ -1,0 +1,23 @@
+---
+title: "DHSC colours package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DHSC colours package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(DHSCcolours)
+```
+
+
+This is the template vignette for DHSC colours the R package.
+
