@@ -1,21 +1,44 @@
 # DHSC Colours R package
+## Features
+ - DHSC branded powerpoint template for rmarkdown.
+ - Approved colour codes for DHSC outputs.
+ - GGplot theme for consistant outputs
+ - GGplot fill and colour scales using dhsc branding colours.
 
-Install using devtools:
 
-```devtools::install_github("https://github.com/DataS-DHSC/DHSC_colours")```
+## Installation
 
-# Overview
+Install using devtools: ```devtools::install_github("https://github.com/DataS-DHSC/DHSC_colours")```
+
+
+## Branded powerpoint template
+
+Installing this package will install the template for a DHSC
+branded powerpoint in rmarkdown. Accessed from within rstudio via:
+*File > New File > R Markdown > From Template > DHSC Powerpoint*
+
+
+## Colour Codes
 
 The function ```dhsc_colours()``` will return a named list of the approved
 colours. Each individual colour can also be called by it's helper function.
-For example: ```dhsc_dark_blue()```.
+For example: ```dhsc_dark_blue()```. There are approved shades of black, white
+and grey, which are retrieved via ```dhsc_bw()```
+
+Having access to the individual colour codes like this will allow users to quickly
+format whatever vizualisation library they are using to align with the DHSC palette.
+
+## GGplot theme
+
+There is a ggplot theme which you can include with any ggplot to standardise on a 
+consistant aesthetic. The theme is accessed via ```theme_dhsc()``` and can be
+included in any ggplot with ```+theme_dhsc()```
+
+## GGplot colour and fill scales
 
 There are also some colour scales which you can ```+``` on to a ggplot object 
-to recolour it with DHSC colours e.g.:
+to recolour it with DHSC colours. There are separate scales for continuous and discrete variables.
 
-Furthermore, installing this package will install the template for a DHSC
-branded powerpoint in rmarkdown. Accessed from within rstudio via:
-*File > New File > R Markdown > From Template > DHSC Powerpoint*
 
 ```
 #Barplot with 3 bars with a discrete X axis filled with DHSC colours
@@ -67,5 +90,7 @@ sim_series(25)%>%
   ggtitle("scale_fill_dhsc_blue_yellow_c")
 
 ```
+
+
 
 
