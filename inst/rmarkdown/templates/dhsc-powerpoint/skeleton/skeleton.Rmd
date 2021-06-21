@@ -23,7 +23,7 @@ pacman::p_load(knitr,DHSCcolours,dplyr,ggplot2)
 :::
 ::: {.column}
 ```{r cars2, echo=FALSE}
-kable(head(cars))
+dhsc_table(head(cars))
 ```
 :::
 ::::::::::::::
@@ -49,7 +49,7 @@ print(iris)
 ## Full slide table
 
 ```{r cars3,echo=FALSE}
-kable(head(iris))
+dhsc_table(head(iris))
 ```
 
 
@@ -64,6 +64,7 @@ sim_series(3)%>%
   geom_col()+
   DHSCcolours::scale_fill_dhsc_d()+
   theme_dhsc()+
+  zero_y_padding()+
   ggtitle("scale_fill_dhsc_d")
 ```
 
@@ -81,6 +82,7 @@ sim_series(3)%>%
   geom_col()+
   scale_fill_dhsc_d()+
   theme_dhsc()+
+  zero_y_padding()+
   ggtitle("scale_fill_dhsc_d")
 ```
 - Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot on the right where the plot is displayed.
@@ -93,6 +95,7 @@ sim_series(25)%>%
   geom_col()+
   DHSCcolours::scale_fill_dhsc_d()+
   theme_dhsc()+
+  zero_y_padding()+
   ggtitle("scale_fill_dhsc_d")
 ```
 :::

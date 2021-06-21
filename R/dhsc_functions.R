@@ -321,4 +321,31 @@ scale_fill_dhsc_blue_yellow_c<-function(){
   ggplot2::scale_fill_gradient(low = dhsc_dark_blue(),high=dhsc_yellow())
 }
 
+#' @title zero_y_padding
+#' @description By default, ggplot introduces some padding around the data to
+#' ensure that they are placed some distance away from the axes. This function
+#' is a shortcut to remove that padding so that if the data start at 0, the y
+#' axis intercept will also be zero.
+#' @return
+#' @export
+#'
+zero_y_padding<-function(){
+  scale_y_continuous(expand = c(0, 0))
+}
+
+
+#' @title dhsc_table
+#' @description For inserting consistent tables into rmarkdown documents. This
+#' is just A wrapper for knitr::kable() in which the default alignment of
+#' text within columns has been changed to be left-aligned.
+#'
+#' @param table_data An R object, which is typically a matrix or data frame.
+#' @param ... Other arguments to pass to kable.
+#'
+#' @return
+#' @export
+#'
+dhsc_table<-function(table_data,...){
+  knitr::kable(table_data, align = "l",...)
+}
 

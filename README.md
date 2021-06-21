@@ -4,6 +4,8 @@
  - Approved colour codes for DHSC outputs.
  - GGplot theme for consistant outputs
  - GGplot fill and colour scales using dhsc branding colours.
+ - Shortcut function remove y axis padding so intercept can be 0.
+ - DHSC_table function for left aligned tables in markdown. 
 
 
 ## Installation
@@ -39,7 +41,20 @@ included in any ggplot with ```+theme_dhsc()```
 There are also some colour scales which you can ```+``` on to a ggplot object 
 to recolour it with DHSC colours. There are separate scales for continuous and discrete variables.
 
+## Shortcut to set y axis intercept to 0. 
 
+By default, ggplot adds a 5% padding to your data when creating a y axis, this is
+to ensure that your data don't sit directly on the axis line. However it is not
+always desirable, e.g. with bar plots. Adding ```+zero_y_padding()``` to your
+ggplot objects will remove the padding, improving the way some plots appear. 
+
+## DHSC tables
+
+By default, numeric columns in rmarkdown can appear right aligned (excel style).
+The ```DHSC_table()``` function removes this behaviour and aligns all table text
+to the left.
+
+## Example Plots
 ```
 #Barplot with 3 bars with a discrete X axis filled with DHSC colours
 sim_series(3)%>%
@@ -47,7 +62,8 @@ sim_series(3)%>%
   geom_col()+
   DHSCcolours::scale_fill_dhsc_d()+
   theme_dhsc()+
-  ggtitle("scale_fill_dhsc_d")
+  ggtitle("scale_fill_dhsc_d")+
+  zero_y_padding()
 
 #Barplot with 25 bars with a discrete X axis filled with DHSC colours
 sim_series(25)%>%
@@ -55,7 +71,8 @@ sim_series(25)%>%
   geom_col()+
   DHSCcolours::scale_fill_dhsc_d()+
   theme_dhsc()+
-  ggtitle("scale_fill_dhsc_d")
+  ggtitle("scale_fill_dhsc_d")+
+  zero_y_padding()
   
 #Barplot with 25 bars with a continuous X axis with DHSC primary green - purple fill
 sim_series(25)%>%
@@ -63,7 +80,8 @@ sim_series(25)%>%
   geom_col()+
   scale_fill_dhsc_c()+
   theme_dhsc()+
-  ggtitle("scale_fill_dhsc_c")
+  ggtitle("scale_fill_dhsc_c")+
+  zero_y_padding()
 
 #Barplot with 25 bars with a continuous X axis with red green fill
 sim_series(25)%>%
@@ -71,7 +89,8 @@ sim_series(25)%>%
   geom_col()+
   scale_fill_dhsc_red_green_c()+
   theme_dhsc()+
-  ggtitle("scale_fill_dhsc_red_green_c")
+  ggtitle("scale_fill_dhsc_red_green_c")+
+  zero_y_padding()
 
 #Barplot with 25 bars with a continuous X axis with blue green fill
 sim_series(25)%>%
@@ -79,7 +98,8 @@ sim_series(25)%>%
   geom_col()+
   scale_fill_dhsc_blue_green_c() +
   theme_dhsc()+
-  ggtitle("scale_fill_dhsc_blue_green_c")
+  ggtitle("scale_fill_dhsc_blue_green_c")+
+  zero_y_padding()
 
 #Barplot with 25 bars with a continuous X axis with blue yellow fill
 sim_series(25)%>%
@@ -87,7 +107,8 @@ sim_series(25)%>%
   geom_col()+
   scale_fill_dhsc_blue_yellow_c() +
   theme_dhsc()+
-  ggtitle("scale_fill_dhsc_blue_yellow_c")
+  ggtitle("scale_fill_dhsc_blue_yellow_c")+
+  zero_y_padding()
 
 ```
 
