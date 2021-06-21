@@ -2,6 +2,7 @@
 ## Features
  - DHSC branded powerpoint template for rmarkdown.
  - Approved colour codes for DHSC outputs.
+ - Colourblind friendly options
  - GGplot theme for consistant outputs
  - GGplot fill and colour scales using dhsc branding colours.
  - Shortcut function remove y axis padding so intercept can be 0.
@@ -29,6 +30,13 @@ and grey, which are retrieved via ```dhsc_bw()```
 
 Having access to the individual colour codes like this will allow users to quickly
 format whatever vizualisation library they are using to align with the DHSC palette.
+
+## Colourblind friendly palettes 
+
+Three and four colour accesible pallets have been hard coded into this package. 
+You can retrieve the colour selections with ```DHSC_accessible_3()``` and 
+```DHSC_accessible_4()```. Or you can use them directly with your ggplots via 
+```DHSC_accessible_scales()```.
 
 ## GGplot theme
 
@@ -61,6 +69,15 @@ sim_series(3)%>%
   ggplot(aes(x=X, y=Z, fill=X))+
   geom_col()+
   DHSCcolours::scale_fill_dhsc_d()+
+  theme_dhsc()+
+  ggtitle("scale_fill_dhsc_d")+
+  zero_y_padding()
+  
+#Barplot with 4 bars with a discrete X axis filled with accesible colours
+sim_series(4)%>%
+  ggplot(aes(x=X, y=Z, fill=X))+
+  geom_col()+
+  DHSCcolours::DHSC_accessible_scales(4)+
   theme_dhsc()+
   ggtitle("scale_fill_dhsc_d")+
   zero_y_padding()

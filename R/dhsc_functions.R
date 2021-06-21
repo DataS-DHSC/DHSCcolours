@@ -349,3 +349,51 @@ dhsc_table<-function(table_data,...){
   knitr::kable(table_data, align = "l",...)
 }
 
+
+#' @title DHSC_accessible_3
+#' @description An accessible 3 colour palette.
+#' @return A list of three colours for a colour blind friendly palette.
+#' @export
+#'
+DHSC_accessible_3<-function(){c(dhsc_primary(), dhsc_orange(), dhsc_purple())}
+
+
+
+#' @title DHSC_accessible_4
+#' @description An accessible 3 colour palette.
+#' @return A list of three colours for a colour blind friendly palette.
+#' @export
+#'
+DHSC_accessible_4<-function(){c(dhsc_light_blue, "#990723",dhsc_orange(),dhsc_purple())}
+
+
+
+#' @title DHSC_accessible_scales
+#' @description This function encodes ggplot color scales which are colour blind
+#' friendly. It currently includes a 3 and 4 colour option.
+#' @param N The number of colours to use, either 3 or 4
+#' @param aesthetics Character string or vector of character strings listing the
+#'  name(s) of the aesthetic(s) that this scale works with. This can be useful,
+#'  for example, to apply colour settings to the colour and fill aesthetics
+#'  at the same time, via aesthetics = c("colour", "fill").
+#'
+#' @return
+#' @export
+#'
+DHSC_accessible_scales <-
+  function(N, aesthetics = c("colour", "fill")) {
+
+    if (N %in% c(3:4) == FALSE | !is.numeric(N)) {
+      stop("N must be an integer, either 3 or 4")
+    }
+
+    if (N == 3) {
+      scale <-
+        scale_fill_manual(values = DHSC_accessible_3(), aesthetics = aesthetics)
+    }
+    if (N == 4) {
+      scale <-
+        scale_fill_manual(values = DHSC_accessible_4(), aesthetics = aesthetics)
+    }
+    scale
+  }
