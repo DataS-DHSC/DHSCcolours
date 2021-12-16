@@ -391,7 +391,7 @@ DHSC_accessible_3 <- function() {
 #' @export
 #'
 DHSC_accessible_4 <- function() {
-  c(dhsc_light_blue, "#990723", dhsc_orange(), dhsc_purple())
+  c(dhsc_light_blue(), "#990723", dhsc_orange(), dhsc_purple())
 }
 
 
