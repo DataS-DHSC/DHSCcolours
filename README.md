@@ -1,17 +1,25 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-DHSC Colours R package ## Features - DHSC branded powerpoint template
-for rmarkdown. - Approved colour codes for DHSC outputs. - Colourblind
-friendly options - GGplot theme for consistant outputs - GGplot fill and
-colour scales using dhsc branding colours. - Shortcut function remove y
-axis padding so intercept can be 0. - DHSC_table function for left
-aligned tables in markdown.
+# DHSC Colours R package
+
+## Features
+
+-   DHSC branded powerpoint template for rmarkdown.
+-   Approved colour codes for DHSC outputs.
+-   Colourblind friendly options
+-   ggplot theme for consistant outputs
+-   ggplot fill and colour scales using dhsc branding colours.
+-   Shortcut function remove y axis padding so intercept can be 0.
+-   DHSC_table function for left aligned tables in markdown.
 
 ## Installation
 
-Install using devtools:
-`devtools::install_github("https://github.com/DataS-DHSC/DHSC_colours")`
+Install using remotes:
+
+``` r
+remotes::install_github("https://github.com/DataS-DHSC/DHSC_colours")
+```
 
 ## Branded powerpoint template
 
@@ -38,13 +46,13 @@ package. You can retrieve the colour selections with
 directly with your ggplots via
 
 ``` dhsc_accessible_scales()```.
-## GGplot theme
+## ggplot theme
 
 There is a ggplot theme which you can include with any ggplot to standardise on a 
 consistant aesthetic. The theme is accessed via ```theme_dhsc()``` and can be
 included in any ggplot with ```+theme_dhsc()```
 
-## GGplot colour and fill scales
+## ggplot colour and fill scales
 
 There are also some colour scales which you can ```+``` on to a ggplot object 
 to recolour it with DHSC colours. There are separate scales for continuous and discrete variables.
