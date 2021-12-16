@@ -9,18 +9,12 @@
 #'
 #' @examples
 #' sim_series(5)
-sim_series <- function(N = 1){
-  letter_df<-expand.grid(LETTERS,c(1:N))
-  df = dplyr::tibble(X = paste(letter_df[,1],letter_df[,2],sep = "_"),
-                     Y = seq_along(X),
-                     Z = Y^2)
-  df[1:N,]
+sim_series <- function(N = 1) {
+  letter_df <- expand.grid(LETTERS, c(1:N))
+  df <- dplyr::tibble(
+    X = paste(letter_df[, 1], letter_df[, 2], sep = "_"),
+    Y = seq_along(X),
+    Z = Y^2
+  )
+  df[1:N, ]
 }
-
-
-
-
-
-
-
-
