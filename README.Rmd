@@ -1,51 +1,62 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "tools/README-"
+)
+```
+
 
 # DHSC Colours R package
 
 ## Features
+ - DHSC branded powerpoint template for rmarkdown.
+ - Approved colour codes for DHSC outputs.
+ - Colourblind friendly options
+ - ggplot theme for consistant outputs
+ - ggplot fill and colour scales using dhsc branding colours.
+ - Shortcut function remove y axis padding so intercept can be 0.
+ - DHSC_table function for left aligned tables in markdown. 
 
--   DHSC branded powerpoint template for rmarkdown.
--   Approved colour codes for DHSC outputs.
--   Colourblind friendly options
--   ggplot theme for consistant outputs
--   ggplot fill and colour scales using dhsc branding colours.
--   Shortcut function remove y axis padding so intercept can be 0.
--   DHSC_table function for left aligned tables in markdown.
 
 ## Installation
 
-Install using remotes:
-
-``` r
+Install using remotes: 
+```{r install, eval=FALSE}
 remotes::install_github("https://github.com/DataS-DHSC/DHSC_colours")
 ```
 
+
 ## Branded powerpoint template
 
-Installing this package will install the template for a DHSC branded
-powerpoint in rmarkdown. Accessed from within rstudio via: *File \> New
-File \> R Markdown \> From Template \> DHSC Powerpoint*
+Installing this package will install the template for a DHSC
+branded powerpoint in rmarkdown. Accessed from within rstudio via:
+*File > New File > R Markdown > From Template > DHSC Powerpoint*
+
 
 ## Colour Codes
 
-The function `dhsc_colours()` will return a named list of the approved
-colours. Each individual colour can also be called by it’s helper
-function. For example: `dhsc_dark_blue()`. There are approved shades of
-black, white and grey, which are retrieved via `dhsc_bw()`
+The function ```dhsc_colours()``` will return a named list of the approved
+colours. Each individual colour can also be called by it's helper function.
+For example: ```dhsc_dark_blue()```. There are approved shades of black, white
+and grey, which are retrieved via ```dhsc_bw()```
 
-Having access to the individual colour codes like this will allow users
-to quickly format whatever vizualisation library they are using to align
-with the DHSC palette.
+Having access to the individual colour codes like this will allow users to quickly
+format whatever vizualisation library they are using to align with the DHSC palette.
 
-## Colourblind friendly palettes
+## Colourblind friendly palettes 
 
-Three and four colour accesible pallets have been hard coded into this
-package. You can retrieve the colour selections with
-`DHSC_accessible_3()` and `DHSC_accessible_4()`. Or you can use them
-directly with your ggplots via
+Three and four colour accesible pallets have been hard coded into this package. 
+You can retrieve the colour selections with ```DHSC_accessible_3()``` and 
+```DHSC_accessible_4()```. Or you can use them directly with your ggplots via 
+```DHSC_accessible_scales()```.
 
-``` dhsc_accessible_scales()```.
 ## ggplot theme
 
 There is a ggplot theme which you can include with any ggplot to standardise on a 
@@ -72,8 +83,7 @@ to the left.
 
 ## Example Plots
 
-
-```r
+```{r examples, message=FALSE}
 library(dplyr)
 library(ggplot2)
 library(DHSCcolours)
@@ -86,11 +96,7 @@ sim_series(3) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_d") +
   zero_y_padding()
-```
 
-![](tools/README-examples-1.png)<!-- -->
-
-``` r
 # Barplot with 4 bars with a discrete X axis filled with accesible colours
 sim_series(4) %>%
   ggplot(aes(x = X, y = Z, fill = X)) +
@@ -99,11 +105,7 @@ sim_series(4) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_d") +
   zero_y_padding()
-```
 
-![](tools/README-examples-2.png)<!-- -->
-
-``` r
 # Barplot with 25 bars with a discrete X axis filled with DHSC colours
 sim_series(25) %>%
   ggplot(aes(x = X, y = Z, fill = X)) +
@@ -112,11 +114,7 @@ sim_series(25) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_d") +
   zero_y_padding()
-```
 
-![](tools/README-examples-3.png)<!-- -->
-
-``` r
 # Barplot with 25 bars with a continuous X axis with DHSC primary green - purple fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -125,11 +123,7 @@ sim_series(25) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_c") +
   zero_y_padding()
-```
 
-![](tools/README-examples-4.png)<!-- -->
-
-``` r
 # Barplot with 25 bars with a continuous X axis with red green fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -138,11 +132,7 @@ sim_series(25) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_red_green_c") +
   zero_y_padding()
-```
 
-![](tools/README-examples-5.png)<!-- -->
-
-``` r
 # Barplot with 25 bars with a continuous X axis with blue green fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -151,11 +141,7 @@ sim_series(25) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_blue_green_c") +
   zero_y_padding()
-```
 
-![](tools/README-examples-6.png)<!-- -->
-
-``` r
 # Barplot with 25 bars with a continuous X axis with blue yellow fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -164,6 +150,5 @@ sim_series(25) %>%
   theme_dhsc() +
   ggtitle("scale_fill_dhsc_blue_yellow_c") +
   zero_y_padding()
-```
 
-![](tools/README-examples-7.png)<!-- -->
+```

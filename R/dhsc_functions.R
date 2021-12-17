@@ -1,89 +1,117 @@
-#Functions
+# Functions
 
 #' dhsc_white
 #' The colour code for DHSC white
 #' @return
 #' @export
-dhsc_white<-function(){"#ffffff"}
+dhsc_white <- function() {
+  "#ffffff"
+}
 
 
 #' dhsc_black
 #' The colour code for DHSC black
 #' @return
 #' @export
-dhsc_black<-function(){"#101820"}
+dhsc_black <- function() {
+  "#101820"
+}
 
 #' dhsc_primary
 #' The colour code for the DHSC primary colour.
 #' @return
 #' @export
-dhsc_primary<-function(){"#00ad93"}
+dhsc_primary <- function() {
+  "#00ad93"
+}
 
 #' dhsc_grey
 #' The colour code for DHSC grey
 #' @return
 #' @export
-dhsc_grey<-function(){"#616265"}
+dhsc_grey <- function() {
+  "#616265"
+}
 
 #' dhsc_red
 #' The colour code for DHSC red
 #' @return
 #' @export
-dhsc_red<-function(){"#cc092f"}
+dhsc_red <- function() {
+  "#cc092f"
+}
 
 #' dhsc_orange
 #' The colour code for DHSC orange
 #' @return
 #' @export
-dhsc_orange<-function(){"#e57200"}
+dhsc_orange <- function() {
+  "#e57200"
+}
 
 #' dhsc_burgendy
 #' The colour code for DHSC burgendy
 #' @return
 #' @export
-dhsc_burgendy<-function(){"#8b2346"}
+dhsc_burgendy <- function() {
+  "#8b2346"
+}
 
 #' dhsc_light_blue
 #' The colour code for DHSC light blue
 #' @return
 #' @export
-dhsc_light_blue<-function(){"#34b6e4"}
+dhsc_light_blue <- function() {
+  "#34b6e4"
+}
 
 #' dhsc_dark_blue
 #' The colour code for DHSC dark blue
 #' @return
 #' @export
-dhsc_dark_blue<-function(){"#0063be"}
+dhsc_dark_blue <- function() {
+  "#0063be"
+}
 
 #' dhsc_light_green
 #' The colour code for DHSC light green.
 #' @return
 #' @export
-dhsc_light_green<-function(){"#2eb135"}
+dhsc_light_green <- function() {
+  "#2eb135"
+}
 
 #' dhsc_dark_green
 #' The colour code for DHSC dark green.
 #' @return
 #' @export
-dhsc_dark_green<-function(){"#006652"}
+dhsc_dark_green <- function() {
+  "#006652"
+}
 
 #' dhsc_yellow
 #' The colour code for DHSC yellow
 #' @return
 #' @export
-dhsc_yellow<-function(){"#ecac00"}
+dhsc_yellow <- function() {
+  "#ecac00"
+}
 
 #' dhsc_pink
 #' The colour code for DHSC pink
 #' @return
 #' @export
-dhsc_pink<-function(){"#cd66cc"}
+dhsc_pink <- function() {
+  "#cd66cc"
+}
 
 #' dhsc_purple
 #' The colour code for DHSC purple
 #' @return
 #' @export
-dhsc_purple<-function(){"#512698"}
+dhsc_purple <- function() {
+  "#512698"
+}
 
 
 #' @title dhsc_colours
@@ -92,20 +120,21 @@ dhsc_purple<-function(){"#512698"}
 #' @export
 #'
 #' @examples dhsc_colours()
-dhsc_colours<-function(){
+dhsc_colours <- function() {
   list(
-    dhsc_primary ="#00ad93",
-    dhsc_light_blue ="#34b6e4",
-    dhsc_dark_blue ="#0063be",
-    dhsc_light_green ="#2eb135",
-    dhsc_dark_green ="#006652",
-    dhsc_yellow ="#ecac00",
-    dhsc_orange ="#e57200",
-    dhsc_burgendy ="#8b2346",
-    dhsc_red ="#cc092f",
-    dhsc_pink ="#cd66cc",
-    dhsc_purple ="#512698"
-  )}
+    dhsc_primary = "#00ad93",
+    dhsc_light_blue = "#34b6e4",
+    dhsc_dark_blue = "#0063be",
+    dhsc_light_green = "#2eb135",
+    dhsc_dark_green = "#006652",
+    dhsc_yellow = "#ecac00",
+    dhsc_orange = "#e57200",
+    dhsc_burgendy = "#8b2346",
+    dhsc_red = "#cc092f",
+    dhsc_pink = "#cd66cc",
+    dhsc_purple = "#512698"
+  )
+}
 
 
 #' @title dhsc_bw
@@ -114,12 +143,13 @@ dhsc_colours<-function(){
 #' @export
 #'
 #' @examples dhsc_colours()
-
-dhsc_bw<-function(){
-list(dhsc_black="#101820",
-       dhsc_grey="#616265",
-       dhsc_white="#ffffff"
-       )}
+dhsc_bw <- function() {
+  list(
+    dhsc_black = "#101820",
+    dhsc_grey = "#616265",
+    dhsc_white = "#ffffff"
+  )
+}
 
 
 #' @title  dhsc_pal
@@ -191,10 +221,7 @@ dhsc_pal <- function(n, alpha = 1, begin = 0, end = 1, direction = 1) {
 
 scale_colour_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
                                 direction = 1, aesthetics = "colour") {
-
-  dhsc_pal_2<-function (alpha = 1, begin = 0, end = 1, direction = 1)
-  {
-
+  dhsc_pal_2 <- function(alpha = 1, begin = 0, end = 1, direction = 1) {
     force_all <- function(...) list(...)
 
     force_all(alpha, begin, end, direction)
@@ -232,11 +259,8 @@ scale_colour_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
 #' @export
 #'
 scale_fill_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
-                                direction = 1, aesthetics = "fill") {
-
-  dhsc_pal_2<-function (alpha = 1, begin = 0, end = 1, direction = 1)
-  {
-
+                              direction = 1, aesthetics = "fill") {
+  dhsc_pal_2 <- function(alpha = 1, begin = 0, end = 1, direction = 1) {
     force_all <- function(...) list(...)
 
     force_all(alpha, begin, end, direction)
@@ -258,8 +282,8 @@ scale_fill_dhsc_d <- function(..., alpha = 1, begin = 0, end = 1,
 #'
 #' @export
 #'
-scale_colour_dhsc_c<-function(){
-  ggplot2::scale_colour_gradient(low=dhsc_primary(),high=dhsc_purple())
+scale_colour_dhsc_c <- function() {
+  ggplot2::scale_colour_gradient(low = dhsc_primary(), high = dhsc_purple())
 }
 
 #' @title scale_fill_dhsc_c
@@ -267,16 +291,16 @@ scale_colour_dhsc_c<-function(){
 #'
 #' @export
 #'
-scale_fill_dhsc_c<-function(){
-  ggplot2::scale_fill_gradient(low=dhsc_primary(),high=dhsc_purple())
+scale_fill_dhsc_c <- function() {
+  ggplot2::scale_fill_gradient(low = dhsc_primary(), high = dhsc_purple())
 }
 
 #' @title scale_colour_dhsc_red_green_c
 #' @description Use a continuous colour scale from DHSC green to red.
 #' @export
 #'
-scale_colour_dhsc_red_green_c<-function(){
-  ggplot2::scale_colour_gradient(low=dhsc_primary(),high=dhsc_red())
+scale_colour_dhsc_red_green_c <- function() {
+  ggplot2::scale_colour_gradient(low = dhsc_primary(), high = dhsc_red())
 }
 
 
@@ -284,8 +308,8 @@ scale_colour_dhsc_red_green_c<-function(){
 #' @description Use a continuous fill scale from DHSC green to red.
 #' @export
 #'
-scale_fill_dhsc_red_green_c<-function(){
-  ggplot2::scale_fill_gradient(low=dhsc_primary(),high=dhsc_red())
+scale_fill_dhsc_red_green_c <- function() {
+  ggplot2::scale_fill_gradient(low = dhsc_primary(), high = dhsc_red())
 }
 
 
@@ -293,32 +317,32 @@ scale_fill_dhsc_red_green_c<-function(){
 #' @description Use a continuous colour scale from DHSC blue to green.
 #' @export
 #'
-scale_colour_dhsc_blue_green_c<-function(){
-  ggplot2::scale_colour_gradient(low = dhsc_dark_blue(),high=dhsc_primary())
+scale_colour_dhsc_blue_green_c <- function() {
+  ggplot2::scale_colour_gradient(low = dhsc_dark_blue(), high = dhsc_primary())
 }
 
 #' @title scale_fill_dhsc_blue_green
 #' @description Use a continuous fill scale from DHSC blue to green.
 #' @export
 #'
-scale_fill_dhsc_blue_green_c<-function(){
-  ggplot2::scale_fill_gradient(low = dhsc_dark_blue(),high=dhsc_primary())
+scale_fill_dhsc_blue_green_c <- function() {
+  ggplot2::scale_fill_gradient(low = dhsc_dark_blue(), high = dhsc_primary())
 }
 
 #' @title scale_colour_dhsc_blue_yellow
 #' @description Use a continuous colour scale from DHSC blue to yellow
 #' @export
 #'
-scale_colour_dhsc_blue_yellow_c<-function(){
-  ggplot2::scale_colour_gradient(low = dhsc_dark_blue(),high=dhsc_yellow())
+scale_colour_dhsc_blue_yellow_c <- function() {
+  ggplot2::scale_colour_gradient(low = dhsc_dark_blue(), high = dhsc_yellow())
 }
 
 #' @title scale_fill_dhsc_blue_yellow
 #' @description Use a continuous fill scale from DHSC blue to yellow
 #' @export
 #'
-scale_fill_dhsc_blue_yellow_c<-function(){
-  ggplot2::scale_fill_gradient(low = dhsc_dark_blue(),high=dhsc_yellow())
+scale_fill_dhsc_blue_yellow_c <- function() {
+  ggplot2::scale_fill_gradient(low = dhsc_dark_blue(), high = dhsc_yellow())
 }
 
 #' @title zero_y_padding
@@ -329,7 +353,7 @@ scale_fill_dhsc_blue_yellow_c<-function(){
 #' @return
 #' @export
 #'
-zero_y_padding<-function(){
+zero_y_padding <- function() {
   scale_y_continuous(expand = c(0, 0))
 }
 
@@ -345,8 +369,8 @@ zero_y_padding<-function(){
 #' @return
 #' @export
 #'
-dhsc_table<-function(table_data,...){
-  knitr::kable(table_data, align = "l",...)
+dhsc_table <- function(table_data, ...) {
+  knitr::kable(table_data, align = "l", ...)
 }
 
 
@@ -355,7 +379,9 @@ dhsc_table<-function(table_data,...){
 #' @return A list of three colours for a colour blind friendly palette.
 #' @export
 #'
-DHSC_accessible_3<-function(){c(dhsc_primary(), dhsc_orange(), dhsc_purple())}
+DHSC_accessible_3 <- function() {
+  c(dhsc_primary(), dhsc_orange(), dhsc_purple())
+}
 
 
 
@@ -364,7 +390,9 @@ DHSC_accessible_3<-function(){c(dhsc_primary(), dhsc_orange(), dhsc_purple())}
 #' @return A list of three colours for a colour blind friendly palette.
 #' @export
 #'
-DHSC_accessible_4<-function(){c(dhsc_light_blue, "#990723",dhsc_orange(),dhsc_purple())}
+DHSC_accessible_4 <- function() {
+  c(dhsc_light_blue(), "#990723", dhsc_orange(), dhsc_purple())
+}
 
 
 
@@ -382,7 +410,6 @@ DHSC_accessible_4<-function(){c(dhsc_light_blue, "#990723",dhsc_orange(),dhsc_pu
 #'
 DHSC_accessible_scales <-
   function(N, aesthetics = c("colour", "fill")) {
-
     if (N %in% c(3:4) == FALSE | !is.numeric(N)) {
       stop("N must be an integer, either 3 or 4")
     }
