@@ -6,9 +6,6 @@
 \usage{
 dhsc_bw()
 }
-\value{
-A named list
-}
 \description{
 A named list of all the "official" DHSC black, white and grey.
 }

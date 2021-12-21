@@ -7,9 +7,6 @@ The colour code for DHSC purple}
 \usage{
 dhsc_purple()
 }
-\value{
-
-}
 \description{
 dhsc_purple
 The colour code for DHSC purple

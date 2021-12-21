@@ -7,9 +7,6 @@ The colour code for DHSC light blue}
 \usage{
 dhsc_light_blue()
 }
-\value{
-
-}
 \description{
 dhsc_light_blue
 The colour code for DHSC light blue

@@ -7,9 +7,6 @@ The colour code for DHSC grey}
 \usage{
 dhsc_grey()
 }
-\value{
-
-}
 \description{
 dhsc_grey
 The colour code for DHSC grey

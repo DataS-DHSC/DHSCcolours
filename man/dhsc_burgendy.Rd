@@ -7,9 +7,6 @@ The colour code for DHSC burgendy}
 \usage{
 dhsc_burgendy()
 }
-\value{
-
-}
 \description{
 dhsc_burgendy
 The colour code for DHSC burgendy

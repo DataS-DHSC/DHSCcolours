@@ -7,9 +7,6 @@ The colour code for DHSC red}
 \usage{
 dhsc_red()
 }
-\value{
-
-}
 \description{
 dhsc_red
 The colour code for DHSC red

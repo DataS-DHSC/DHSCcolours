@@ -7,9 +7,6 @@ The colour code for DHSC black}
 \usage{
 dhsc_black()
 }
-\value{
-
-}
 \description{
 dhsc_black
 The colour code for DHSC black

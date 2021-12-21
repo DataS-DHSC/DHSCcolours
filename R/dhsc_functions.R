@@ -2,7 +2,6 @@
 
 #' dhsc_white
 #' The colour code for DHSC white
-#' @return
 #' @export
 dhsc_white <- function() {
   "#ffffff"
@@ -11,7 +10,6 @@ dhsc_white <- function() {
 
 #' dhsc_black
 #' The colour code for DHSC black
-#' @return
 #' @export
 dhsc_black <- function() {
   "#101820"
@@ -19,7 +17,6 @@ dhsc_black <- function() {
 
 #' dhsc_primary
 #' The colour code for the DHSC primary colour.
-#' @return
 #' @export
 dhsc_primary <- function() {
   "#00ad93"
@@ -27,7 +24,6 @@ dhsc_primary <- function() {
 
 #' dhsc_grey
 #' The colour code for DHSC grey
-#' @return
 #' @export
 dhsc_grey <- function() {
   "#616265"
@@ -35,7 +31,6 @@ dhsc_grey <- function() {
 
 #' dhsc_red
 #' The colour code for DHSC red
-#' @return
 #' @export
 dhsc_red <- function() {
   "#cc092f"
@@ -43,7 +38,6 @@ dhsc_red <- function() {
 
 #' dhsc_orange
 #' The colour code for DHSC orange
-#' @return
 #' @export
 dhsc_orange <- function() {
   "#e57200"
@@ -51,7 +45,6 @@ dhsc_orange <- function() {
 
 #' dhsc_burgendy
 #' The colour code for DHSC burgendy
-#' @return
 #' @export
 dhsc_burgendy <- function() {
   "#8b2346"
@@ -59,7 +52,6 @@ dhsc_burgendy <- function() {
 
 #' dhsc_light_blue
 #' The colour code for DHSC light blue
-#' @return
 #' @export
 dhsc_light_blue <- function() {
   "#34b6e4"
@@ -67,7 +59,6 @@ dhsc_light_blue <- function() {
 
 #' dhsc_dark_blue
 #' The colour code for DHSC dark blue
-#' @return
 #' @export
 dhsc_dark_blue <- function() {
   "#0063be"
@@ -75,7 +66,6 @@ dhsc_dark_blue <- function() {
 
 #' dhsc_light_green
 #' The colour code for DHSC light green.
-#' @return
 #' @export
 dhsc_light_green <- function() {
   "#2eb135"
@@ -83,7 +73,6 @@ dhsc_light_green <- function() {
 
 #' dhsc_dark_green
 #' The colour code for DHSC dark green.
-#' @return
 #' @export
 dhsc_dark_green <- function() {
   "#006652"
@@ -91,7 +80,6 @@ dhsc_dark_green <- function() {
 
 #' dhsc_yellow
 #' The colour code for DHSC yellow
-#' @return
 #' @export
 dhsc_yellow <- function() {
   "#ecac00"
@@ -99,7 +87,6 @@ dhsc_yellow <- function() {
 
 #' dhsc_pink
 #' The colour code for DHSC pink
-#' @return
 #' @export
 dhsc_pink <- function() {
   "#cd66cc"
@@ -107,7 +94,6 @@ dhsc_pink <- function() {
 
 #' dhsc_purple
 #' The colour code for DHSC purple
-#' @return
 #' @export
 dhsc_purple <- function() {
   "#512698"
@@ -139,7 +125,6 @@ dhsc_colours <- function() {
 
 #' @title dhsc_bw
 #' @description A named list of all the "official" DHSC black, white and grey.
-#' @return A named list
 #' @export
 #'
 #' @examples dhsc_colours()
@@ -169,7 +154,6 @@ dhsc_bw <- function() {
 #' @param direction Sets the order of colors in the scale. If 1, the default, colors
 #' are ordered from darkest to lightest. If -1, the order of colors is reversed.
 #'
-#' @return
 #' @export
 #'
 #' @examples dhsc_pal(2)
@@ -350,7 +334,6 @@ scale_fill_dhsc_blue_yellow_c <- function() {
 #' ensure that they are placed some distance away from the axes. This function
 #' is a shortcut to remove that padding so that if the data start at 0, the y
 #' axis intercept will also be zero.
-#' @return
 #' @export
 #'
 zero_y_padding <- function() {
@@ -366,7 +349,6 @@ zero_y_padding <- function() {
 #' @param table_data An R object, which is typically a matrix or data frame.
 #' @param ... Other arguments to pass to kable.
 #'
-#' @return
 #' @export
 #'
 dhsc_table <- function(table_data, ...) {
@@ -405,7 +387,6 @@ DHSC_accessible_4 <- function() {
 #'  for example, to apply colour settings to the colour and fill aesthetics
 #'  at the same time, via aesthetics = c("colour", "fill").
 #'
-#' @return
 #' @export
 #'
 DHSC_accessible_scales <-

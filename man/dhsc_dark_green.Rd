@@ -7,9 +7,6 @@ The colour code for DHSC dark green.}
 \usage{
 dhsc_dark_green()
 }
-\value{
-
-}
 \description{
 dhsc_dark_green
 The colour code for DHSC dark green.

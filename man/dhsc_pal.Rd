@@ -19,9 +19,6 @@ dhsc_pal(n, alpha = 1, begin = 0, end = 1, direction = 1)
 \item{direction}{Sets the order of colors in the scale. If 1, the default, colors
 are ordered from darkest to lightest. If -1, the order of colors is reversed.}
 }
-\value{
-
-}
 \description{
 This function creates a vector of n equally spaced colors along
 the list of DHSC colours. Reordering the list will change the colours it

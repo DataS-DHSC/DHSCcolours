@@ -7,9 +7,6 @@ The colour code for DHSC orange}
 \usage{
 dhsc_orange()
 }
-\value{
-
-}
 \description{
 dhsc_orange
 The colour code for DHSC orange

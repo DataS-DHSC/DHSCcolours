@@ -7,9 +7,6 @@ The colour code for the DHSC primary colour.}
 \usage{
 dhsc_primary()
 }
-\value{
-
-}
 \description{
 dhsc_primary
 The colour code for the DHSC primary colour.

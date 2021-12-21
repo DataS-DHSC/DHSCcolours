@@ -5,6 +5,7 @@
 #' @param N The number of rows to simulate
 #'
 #' @return A tibble of simulated data.
+#' @importFrom rlang .data
 #' @export
 #'
 #' @examples
@@ -13,8 +14,9 @@ sim_series <- function(N = 1) {
   letter_df <- expand.grid(LETTERS, c(1:N))
   df <- dplyr::tibble(
     X = paste(letter_df[, 1], letter_df[, 2], sep = "_"),
-    Y = seq_along(X),
-    Z = Y^2
+    Y = seq_along(.data$X),
+    Z = .data$Y^2
   )
   df[1:N, ]
+  return(df)
 }

@@ -7,9 +7,6 @@ The colour code for DHSC dark blue}
 \usage{
 dhsc_dark_blue()
 }
-\value{
-
-}
 \description{
 dhsc_dark_blue
 The colour code for DHSC dark blue

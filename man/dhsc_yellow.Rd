@@ -7,9 +7,6 @@ The colour code for DHSC yellow}
 \usage{
 dhsc_yellow()
 }
-\value{
-
-}
 \description{
 dhsc_yellow
 The colour code for DHSC yellow

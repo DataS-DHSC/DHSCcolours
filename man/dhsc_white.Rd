@@ -7,9 +7,6 @@ The colour code for DHSC white}
 \usage{
 dhsc_white()
 }
-\value{
-
-}
 \description{
 dhsc_white
 The colour code for DHSC white

@@ -7,9 +7,6 @@ The colour code for DHSC pink}
 \usage{
 dhsc_pink()
 }
-\value{
-
-}
 \description{
 dhsc_pink
 The colour code for DHSC pink
