@@ -17,6 +17,6 @@ sim_series <- function(N = 1) {
     Y = seq_along(.data$X),
     Z = .data$Y^2
   )
-  df[1:N, ]
+  df <- df[1:N, ]
   return(df)
 }

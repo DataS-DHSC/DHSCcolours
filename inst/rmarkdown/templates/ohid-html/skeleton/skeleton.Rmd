@@ -1,0 +1,91 @@
+---
+title: "Heading 1 - use this for the document title"
+date: 'Published DD Month Year'
+toc-title: 'Contents'
+output: 
+  DHSCcolours::html_ohid:
+    theme: null
+    toc: true
+    toc_depth: 1
+    number_sections: true
+    includes:
+      in_header: ohid_logo.html
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+library(DHSCcolours)
+
+
+## Global options
+opts_chunk$set(echo=FALSE,
+               cache=FALSE)
+```
+
+
+# Heading 2 {.unnumbered}
+
+Paragraph text
+
+## Heading 3 {.unnumbered}
+
+Paragraph text
+
+* Bullet
+
+  * Bullet-sub
+  
+### Heading 4 {.unnumbered}
+
+Paragraph text
+
+1. Bullet - numbered list (do not use this style to number paragraphs)
+1. second number
+
+
+> The boxed text style is for short calls to action.
+>
+> * Insert an asterisk to add a bullet point after the lead-in line
+>
+> You cannot insert footnotes in call to action boxes in HTML (web) documents.
+
+```{r figure-example, fig.cap="Heading - figure/chart/table", fig.topcaption = TRUE, message=FALSE, echo=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(DHSCcolours)
+
+# Barplot with 3 bars with a discrete X axis filled with DHSC colours
+sim_series(3)  |> 
+  ggplot(aes(x = X, y = Z, fill = X)) +
+  geom_col() +
+  DHSCcolours::scale_fill_dhsc_d() +
+  theme_dhsc() +
+  ggtitle("scale_fill_dhsc_d") +
+  zero_y_padding()
+```
+
+# Heading 2 - numbered
+
+Paragraph text
+
+## Heading 3 - numbered
+
+Paragraph text
+
+### Heading 4 {.unnumbered}
+
+Paragraph text
+
+&copy; Crown copyright 2021
+
+[Office for Health Improvement and Disparities](https://www.gov.uk/government/organisations/office-for-health-improvement-and-disparities)
+
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit [nationalarchives.gov.uk/doc/open-government-licence/version/3](http://nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+
+
+```{r ogl, echo=FALSE, out.width = '10%'}
+knitr::include_graphics(system.file("templates/ogl.png", package = "DHSCcolours"))
+```
+

@@ -1,0 +1,4 @@
+name: HTML OHID template
+description: >
+ Template for creating a OHID-branded HTML documents
+create_dir: true
