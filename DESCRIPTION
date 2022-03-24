@@ -16,9 +16,9 @@ Imports:
     dplyr,
     ggplot2,
     grDevices,
-    rlang
+    rlang,
+    rmarkdown
 Suggests: 
-    rmarkdown,
     knitr,
     testthat (>= 3.0.0),
     vdiffr
