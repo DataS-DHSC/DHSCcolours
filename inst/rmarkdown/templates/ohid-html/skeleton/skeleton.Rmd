@@ -85,7 +85,7 @@ This publication is licensed under the terms of the Open Government Licence v3.0
 Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
 
 
-```{r ogl, echo=FALSE, out.width = '10%'}
+```{r ogl, echo=FALSE, out.width = '10%', warning=FALSE}
 knitr::include_graphics(system.file("templates/ogl.png", package = "DHSCcolours"))
 ```
 
