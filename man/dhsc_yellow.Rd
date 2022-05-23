@@ -2,12 +2,10 @@
 % Please edit documentation in R/dhsc_functions.R
 \name{dhsc_yellow}
 \alias{dhsc_yellow}
-\title{dhsc_yellow
-The colour code for DHSC yellow}
+\title{dhsc_yellow}
 \usage{
 dhsc_yellow()
 }
 \description{
-dhsc_yellow
 The colour code for DHSC yellow
 }

@@ -1,6 +1,7 @@
 # Functions
 
 #' dhsc_white
+#'
 #' The colour code for DHSC white
 #' @export
 dhsc_white <- function() {
@@ -9,6 +10,7 @@ dhsc_white <- function() {
 
 
 #' dhsc_black
+#'
 #' The colour code for DHSC black
 #' @export
 dhsc_black <- function() {
@@ -16,6 +18,7 @@ dhsc_black <- function() {
 }
 
 #' dhsc_primary
+#'
 #' The colour code for the DHSC primary colour.
 #' @export
 dhsc_primary <- function() {
@@ -23,6 +26,7 @@ dhsc_primary <- function() {
 }
 
 #' dhsc_grey
+#'
 #' The colour code for DHSC grey
 #' @export
 dhsc_grey <- function() {
@@ -30,6 +34,7 @@ dhsc_grey <- function() {
 }
 
 #' dhsc_red
+#'
 #' The colour code for DHSC red
 #' @export
 dhsc_red <- function() {
@@ -37,6 +42,7 @@ dhsc_red <- function() {
 }
 
 #' dhsc_orange
+#'
 #' The colour code for DHSC orange
 #' @export
 dhsc_orange <- function() {
@@ -44,6 +50,7 @@ dhsc_orange <- function() {
 }
 
 #' dhsc_burgendy
+#'
 #' The colour code for DHSC burgendy
 #' @export
 dhsc_burgendy <- function() {
@@ -51,6 +58,7 @@ dhsc_burgendy <- function() {
 }
 
 #' dhsc_light_blue
+#'
 #' The colour code for DHSC light blue
 #' @export
 dhsc_light_blue <- function() {
@@ -58,6 +66,7 @@ dhsc_light_blue <- function() {
 }
 
 #' dhsc_dark_blue
+#'
 #' The colour code for DHSC dark blue
 #' @export
 dhsc_dark_blue <- function() {
@@ -65,6 +74,7 @@ dhsc_dark_blue <- function() {
 }
 
 #' dhsc_light_green
+#'
 #' The colour code for DHSC light green.
 #' @export
 dhsc_light_green <- function() {
@@ -72,6 +82,7 @@ dhsc_light_green <- function() {
 }
 
 #' dhsc_dark_green
+#'
 #' The colour code for DHSC dark green.
 #' @export
 dhsc_dark_green <- function() {
@@ -79,6 +90,7 @@ dhsc_dark_green <- function() {
 }
 
 #' dhsc_yellow
+#'
 #' The colour code for DHSC yellow
 #' @export
 dhsc_yellow <- function() {
@@ -86,6 +98,7 @@ dhsc_yellow <- function() {
 }
 
 #' dhsc_pink
+#'
 #' The colour code for DHSC pink
 #' @export
 dhsc_pink <- function() {
@@ -93,6 +106,7 @@ dhsc_pink <- function() {
 }
 
 #' dhsc_purple
+#'
 #' The colour code for DHSC purple
 #' @export
 dhsc_purple <- function() {

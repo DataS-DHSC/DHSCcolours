@@ -2,12 +2,10 @@
 % Please edit documentation in R/dhsc_functions.R
 \name{dhsc_primary}
 \alias{dhsc_primary}
-\title{dhsc_primary
-The colour code for the DHSC primary colour.}
+\title{dhsc_primary}
 \usage{
 dhsc_primary()
 }
 \description{
-dhsc_primary
 The colour code for the DHSC primary colour.
 }
