@@ -2,15 +2,10 @@
 % Please edit documentation in R/dhsc_functions.R
 \name{dhsc_grey}
 \alias{dhsc_grey}
-\title{dhsc_grey
-The colour code for DHSC grey}
+\title{dhsc_grey}
 \usage{
 dhsc_grey()
 }
-\value{
-
-}
 \description{
-dhsc_grey
 The colour code for DHSC grey
 }

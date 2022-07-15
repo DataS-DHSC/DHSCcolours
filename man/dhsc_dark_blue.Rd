@@ -2,15 +2,10 @@
 % Please edit documentation in R/dhsc_functions.R
 \name{dhsc_dark_blue}
 \alias{dhsc_dark_blue}
-\title{dhsc_dark_blue
-The colour code for DHSC dark blue}
+\title{dhsc_dark_blue}
 \usage{
 dhsc_dark_blue()
 }
-\value{
-
-}
 \description{
-dhsc_dark_blue
 The colour code for DHSC dark blue
 }

@@ -6,9 +6,6 @@
 \usage{
 zero_y_padding()
 }
-\value{
-
-}
 \description{
 By default, ggplot introduces some padding around the data to
 ensure that they are placed some distance away from the axes. This function

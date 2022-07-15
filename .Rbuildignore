@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^doc$
 ^Meta$
+
+CONTRIBUTING.Rmd
+CONTRIBUTING.md
+README.Rmd

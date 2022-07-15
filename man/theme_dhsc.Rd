@@ -14,11 +14,13 @@ Theme DHSC for ggplot
 }
 \examples{
 
- ggplot2::ggplot(dplyr::tibble(
- y = c(2, 4),
- x = c("A", "B")),
- ggplot2::aes(x = x, y = y, fill = x)) +
- ggplot2::geom_col() +
- theme_dhsc()
-
+ggplot2::ggplot(
+  dplyr::tibble(
+    y = c(2, 4),
+    x = c("A", "B")
+  ),
+  ggplot2::aes(x = x, y = y, fill = x)
+) +
+  ggplot2::geom_col() +
+  theme_dhsc()
 }

@@ -2,15 +2,10 @@
 % Please edit documentation in R/dhsc_functions.R
 \name{dhsc_burgendy}
 \alias{dhsc_burgendy}
-\title{dhsc_burgendy
-The colour code for DHSC burgendy}
+\title{dhsc_burgendy}
 \usage{
 dhsc_burgendy()
 }
-\value{
-
-}
 \description{
-dhsc_burgendy
 The colour code for DHSC burgendy
 }

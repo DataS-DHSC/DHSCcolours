@@ -14,9 +14,6 @@ name(s) of the aesthetic(s) that this scale works with. This can be useful,
 for example, to apply colour settings to the colour and fill aesthetics
 at the same time, via aesthetics = c("colour", "fill").}
 }
-\value{
-
-}
 \description{
 This function encodes ggplot color scales which are colour blind
 friendly. It currently includes a 3 and 4 colour option.

@@ -11,9 +11,6 @@ dhsc_table(table_data, ...)
 
 \item{...}{Other arguments to pass to kable.}
 }
-\value{
-
-}
 \description{
 For inserting consistent tables into rmarkdown documents. This
 is just A wrapper for knitr::kable() in which the default alignment of
