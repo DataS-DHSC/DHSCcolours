@@ -7,8 +7,8 @@
 DHSC_accessible_4()
 }
 \value{
-A list of three colours for a colour blind friendly palette.
+A list of four colours for a colour blind friendly palette.
 }
 \description{
-An accessible 3 colour palette.
+An accessible 4 colour palette.
 }

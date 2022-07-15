@@ -7,7 +7,7 @@
 DHSC_accessible_scales(N, aesthetics = c("colour", "fill"))
 }
 \arguments{
-\item{N}{The number of colours to use, either 3 or 4}
+\item{N}{The number of colours to use, either 3, 4, or 5}
 
 \item{aesthetics}{Character string or vector of character strings listing the
 name(s) of the aesthetic(s) that this scale works with. This can be useful,
@@ -19,5 +19,5 @@ at the same time, via aesthetics = c("colour", "fill").}
 }
 \description{
 This function encodes ggplot color scales which are colour blind
-friendly. It currently includes a 3 and 4 colour option.
+friendly. It currently includes a 3, 4, and 5 colour option.
 }

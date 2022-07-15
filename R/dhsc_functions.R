@@ -384,10 +384,9 @@ DHSC_accessible_3 <- function() {
 }
 
 
-
 #' @title DHSC_accessible_4
-#' @description An accessible 3 colour palette.
-#' @return A list of three colours for a colour blind friendly palette.
+#' @description An accessible 4 colour palette.
+#' @return A list of four colours for a colour blind friendly palette.
 #' @export
 #'
 DHSC_accessible_4 <- function() {
@@ -395,11 +394,30 @@ DHSC_accessible_4 <- function() {
 }
 
 
+#' @title DHSC_accessible_5
+#' @description An accessible 5 colour palette.
+#' @return A list of five colours for a colour blind friendly palette.
+#' @export
+#'
+DHSC_accessible_5 <- function() {
+  c("#512698", "#E57200", "#1A9CCB", "#2F4D14", "#D06DCE")
+}
+
+
+#' @title DHSC_accessible_5_gradient
+#' @description An accessible 5 colour palette for ordinal data.
+#' @return A list of five colours for a colour blind friendly palette.
+#' @export
+#'
+DHSC_accessible_5_gradient <- function() {
+  c("#294011", "#4C721D", "#589325", "#88D147", "#D7EFC3")
+}
+
 
 #' @title DHSC_accessible_scales
 #' @description This function encodes ggplot color scales which are colour blind
-#' friendly. It currently includes a 3 and 4 colour option.
-#' @param N The number of colours to use, either 3 or 4
+#' friendly. It currently includes a 3, 4, and 5 colour option.
+#' @param N The number of colours to use, either 3, 4, or 5
 #' @param aesthetics Character string or vector of character strings listing the
 #'  name(s) of the aesthetic(s) that this scale works with. This can be useful,
 #'  for example, to apply colour settings to the colour and fill aesthetics
@@ -410,8 +428,8 @@ DHSC_accessible_4 <- function() {
 #'
 DHSC_accessible_scales <-
   function(N, aesthetics = c("colour", "fill")) {
-    if (N %in% c(3:4) == FALSE | !is.numeric(N)) {
-      stop("N must be an integer, either 3 or 4")
+    if (N %in% c(3:5) == FALSE | !is.numeric(N)) {
+      stop("N must be an integer from 3 to 5")
     }
 
     if (N == 3) {
@@ -421,6 +439,10 @@ DHSC_accessible_scales <-
     if (N == 4) {
       scale <-
         scale_fill_manual(values = DHSC_accessible_4(), aesthetics = aesthetics)
+    }
+    if (N == 5) {
+      scale <-
+        scale_fill_manual(values = DHSC_accessible_5(), aesthetics = aesthetics)
     }
     scale
   }
