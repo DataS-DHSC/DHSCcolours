@@ -374,6 +374,11 @@ dhsc_table <- function(table_data, ...) {
 }
 
 
+
+
+
+
+
 #' @title DHSC_accessible_3
 #' @description An accessible 3 colour palette.
 #' @return A list of three colours for a colour blind friendly palette.
@@ -443,6 +448,33 @@ DHSC_accessible_scales <-
     if (N == 5) {
       scale <-
         scale_fill_manual(values = DHSC_accessible_5(), aesthetics = aesthetics)
+    }
+    scale
+  }
+
+
+
+
+#' @title DHSC_accessible_gradient
+#' @description This function encodes ggplot color scales which are colour blind
+#' friendly. It currently includes a 5 colour option.
+#' @param N The number of colours to use is 5
+#' @param aesthetics Character string or vector of character strings listing the
+#'  name(s) of the aesthetic(s) that this scale works with. This can be useful,
+#'  for example, to apply colour settings to the colour and fill aesthetics
+#'  at the same time, via aesthetics = c("colour", "fill").
+#'
+#' @return
+#' @export
+#'
+DHSC_accessible_gradient <-
+  function(N, aesthetics = c("colour", "fill")) {
+    if (N %in% c(5:5) == FALSE | !is.numeric(N)) {
+      stop("N must be an integer of 5")
+    }
+    if (N == 5) {
+      scale <-
+        scale_fill_manual(values = DHSC_accessible_5_gradient(), aesthetics = aesthetics)
     }
     scale
   }
