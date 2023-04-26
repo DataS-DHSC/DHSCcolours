@@ -18,7 +18,7 @@
 Install using remotes:
 
 ``` r
-remotes::install_github("https://github.com/DataS-DHSC/DHSC_colours")
+remotes::install_github("https://github.com/DataS-DHSC/DHSCcolours")
 ```
 
 ## Branded powerpoint template
