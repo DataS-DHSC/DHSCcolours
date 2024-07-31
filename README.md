@@ -3,22 +3,28 @@
 
 # DHSC Colours R package
 
+**Warning - this package will soon be deprecated and replaced with a
+central GSS colours package, that conforms to accessibility
+requirements. Ensure charts being used in your publications adhere to
+[Goverment Analysis Function
+guidelines](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/).**
+
 ## Features
 
--   DHSC branded powerpoint template for rmarkdown.
--   Approved colour codes for DHSC outputs.
--   Colourblind friendly options
--   ggplot theme for consistant outputs
--   ggplot fill and colour scales using dhsc branding colours.
--   Shortcut function remove y axis padding so intercept can be 0.
--   DHSC_table function for left aligned tables in markdown.
+- DHSC branded powerpoint template for rmarkdown.
+- Approved colour codes for DHSC outputs.
+- Colourblind friendly options
+- ggplot theme for consistant outputs
+- ggplot fill and colour scales using dhsc branding colours.
+- Shortcut function remove y axis padding so intercept can be 0.
+- DHSC_table function for left aligned tables in markdown.
 
 ## Installation
 
 Install using remotes:
 
 ``` r
-remotes::install_github("https://github.com/DataS-DHSC/DHSCcolours")
+remotes::install_github("https://github.com/DataS-DHSC/DHSC_colours")
 ```
 
 ## Branded powerpoint template
@@ -46,6 +52,7 @@ package. You can retrieve the colour selections with
 directly with your ggplots via
 
 ``` dhsc_accessible_scales()```.
+
 ## ggplot theme
 
 There is a ggplot theme which you can include with any ggplot to standardise on a 
@@ -75,7 +82,9 @@ to the left.
 
 ```r
 library(dplyr)
+#> Warning: package 'dplyr' was built under R version 4.2.3
 library(ggplot2)
+#> Warning: package 'ggplot2' was built under R version 4.2.3
 library(DHSCcolours)
 
 # Barplot with 3 bars with a discrete X axis filled with DHSC colours
@@ -91,6 +100,7 @@ sim_series(3) %>%
 ![](tools/README-examples-1.png)<!-- -->
 
 ``` r
+
 # Barplot with 4 bars with a discrete X axis filled with accesible colours
 sim_series(4) %>%
   ggplot(aes(x = X, y = Z, fill = X)) +
@@ -104,6 +114,7 @@ sim_series(4) %>%
 ![](tools/README-examples-2.png)<!-- -->
 
 ``` r
+
 # Barplot with 25 bars with a discrete X axis filled with DHSC colours
 sim_series(25) %>%
   ggplot(aes(x = X, y = Z, fill = X)) +
@@ -117,6 +128,7 @@ sim_series(25) %>%
 ![](tools/README-examples-3.png)<!-- -->
 
 ``` r
+
 # Barplot with 25 bars with a continuous X axis with DHSC primary green - purple fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -130,6 +142,7 @@ sim_series(25) %>%
 ![](tools/README-examples-4.png)<!-- -->
 
 ``` r
+
 # Barplot with 25 bars with a continuous X axis with red green fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -143,6 +156,7 @@ sim_series(25) %>%
 ![](tools/README-examples-5.png)<!-- -->
 
 ``` r
+
 # Barplot with 25 bars with a continuous X axis with blue green fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
@@ -156,6 +170,7 @@ sim_series(25) %>%
 ![](tools/README-examples-6.png)<!-- -->
 
 ``` r
+
 # Barplot with 25 bars with a continuous X axis with blue yellow fill
 sim_series(25) %>%
   ggplot(aes(x = Y, y = Z, fill = Z)) +
