@@ -6,6 +6,11 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## 🚨 Deprecation Notice 🚨
+This repository is **deprecated** as of 17 October 2024. It is no longer actively maintained. 
+For similar functionality, please refer to [afcolours](https://github.com/best-practice-and-impact/afcolours).
+Issues or pull requests will not be addressed.
+
 # Contributing to {DHSCcolours}
 
 This outlines how to propose a change to {DHSCcolours}. 
