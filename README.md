@@ -7,7 +7,7 @@
 
 This repository is **deprecated** as of 17 October 2024. It is no longer
 actively maintained. For similar functionality, please refer to
-[afcolours](https://github.com/best-practice-and-impact/afcolours).
+[afcharts](https://github.com/best-practice-and-impact/afcharts).
 
 ## Features
 
